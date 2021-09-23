@@ -37,7 +37,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
     
     func button() {
         let button: UIButton = UIButton(frame: CGRect(x: 70, y: 150, width: 300, height: 150))
-        button.setTitle("button", for: .normal)
+        button.setTitle("你好", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.addTarget(self, action: #selector(PushButton), for: .touchUpInside)
         self.view.addSubview(button)
