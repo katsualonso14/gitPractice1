@@ -14,7 +14,20 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVSpeechSynthesiz
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let audioSession = AVAudioSession.sharedInstance()
         
+        do {
+     
+//            // デリゲートの設定
+//            audioPlayer!.delegate = self
+            // マナーモードでも音を鳴らすようにする
+            try audioSession.setCategory(.playback)
+
+        } catch {
+            print("Audio Setting Failed.")
+            return
+        }
+
         
         button()
         
